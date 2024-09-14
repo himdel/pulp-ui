@@ -22,11 +22,11 @@ function createGroupManually(name) {
 function addUserToGroupManually(groupName, userName) {
   cy.menuGo('User Access > Groups');
   cy.get(`[data-cy="GroupList-row-${groupName}"] a`).click();
-  cy.contains('a.pf-v5-c-tabs__link', 'Users').click();
+  cy.contains('a.pf-v6-c-tabs__link', 'Users').click();
   cy.contains('button', 'Add').click();
-  cy.get('.pf-v5-c-select__toggle-typeahead input').type(userName);
+  cy.get('.pf-v6-c-select__toggle-typeahead input').type(userName);
   cy.contains('button', userName).click();
-  cy.get('.pf-v5-c-content h2').click(); // click modal header to close dropdown
+  cy.get('.pf-v6-c-content h2').click(); // click modal header to close dropdown
   cy.contains('footer > button', 'Add').click({ force: true });
   cy.get(`[data-cy="GroupDetail-users-${userName}"]`).should('exist');
 }
@@ -50,7 +50,7 @@ function deleteGroupManually(name) {
 function removeUserFromGroupManually(groupName, userName) {
   cy.menuGo('User Access > Groups');
   cy.get(`[data-cy="GroupList-row-${groupName}"] a`).click();
-  cy.contains('a.pf-v5-c-tabs__link', 'Users').click();
+  cy.contains('a.pf-v6-c-tabs__link', 'Users').click();
   cy.get(
     `[data-cy="GroupDetail-users-${userName}"] [aria-label="Actions"]`,
   ).click();
@@ -106,13 +106,13 @@ describe('Pulp Group Management Tests', () => {
       .find('input')
       .click();
 
-    cy.get('.pf-v5-c-wizard__footer > button').contains('Next').click();
+    cy.get('.pf-v6-c-wizard__footer > button').contains('Next').click();
 
     cy.contains(roleName);
 
     cy.intercept('GET', `${apiPrefix}roles/*`).as('roles');
 
-    cy.get('.pf-v5-c-wizard__footer > button').contains('Add').click();
+    cy.get('.pf-v6-c-wizard__footer > button').contains('Add').click();
 
     cy.contains(
       `Role ${roleName} has been successfully added to ${groupName}.`,
@@ -123,7 +123,7 @@ describe('Pulp Group Management Tests', () => {
     cy.get(
       `[data-cy="RoleListTable-ExpandableRow-row-${roleName}"] [data-cy="kebab-toggle"]`,
     ).click();
-    cy.get('.pf-v5-c-dropdown__menu-item').contains('Remove role').click();
+    cy.get('.pf-v6-c-dropdown__menu-item').contains('Remove role').click();
     cy.get('[data-cy="delete-button"]').contains('Delete').click();
 
     cy.contains('There are currently no roles assigned to this group.');

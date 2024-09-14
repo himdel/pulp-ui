@@ -3,8 +3,8 @@ const apiPrefix = Cypress.env('apiPrefix');
 const helperText = (id) =>
   cy
     .get(`#${id}`)
-    .parents('.pf-v5-c-form__group')
-    .find('.pf-v5-c-helper-text__item-text');
+    .parents('.pf-v6-c-form__group')
+    .find('.pf-v6-c-helper-text__item-text');
 
 describe('My Profile Tests', () => {
   const username = 'nopermission';
@@ -36,7 +36,7 @@ describe('My Profile Tests', () => {
   });
 
   it('superuser cannot change its superuser rights', () => {
-    cy.get('.pf-v5-c-switch__input').should('be.disabled');
+    cy.get('.pf-v6-c-switch__input').should('be.disabled');
   });
 
   it('user cannot set superusers rights', () => {
@@ -46,7 +46,7 @@ describe('My Profile Tests', () => {
     cy.contains('a', 'My profile').click();
     cy.contains('button', 'Edit').click();
 
-    cy.get('.pf-v5-c-switch__input').should('be.disabled');
+    cy.get('.pf-v6-c-switch__input').should('be.disabled');
   });
 
   it('email must be email', () => {
@@ -64,7 +64,7 @@ describe('My Profile Tests', () => {
 
     cy.get('#email').type('.com{enter}');
 
-    cy.get('.pf-v5-c-alert.pf-m-success').should('be.visible');
+    cy.get('.pf-v6-c-alert.pf-m-success').should('be.visible');
   });
 
   it('password validations', () => {
@@ -102,13 +102,13 @@ describe('My Profile Tests', () => {
     cy.intercept('PUT', `${apiPrefix}_ui/v1/me/`).as('saveForm');
 
     cy.contains('Save').click();
-    cy.get('.pf-v5-c-alert.pf-m-success').contains(
+    cy.get('.pf-v6-c-alert.pf-m-success').contains(
       'Saved changes to user "admin".',
     );
 
     cy.wait('@saveForm').its('response.statusCode').should('eq', 200);
 
-    cy.get('.pf-v5-c-alert.pf-m-success').contains(
+    cy.get('.pf-v6-c-alert.pf-m-success').contains(
       'Saved changes to user "admin".',
     );
   });
@@ -119,7 +119,7 @@ describe('My Profile Tests', () => {
     cy.get('#last_name').clear().type('Last Name');
     cy.get('#email').clear().type('administrator@example.com');
 
-    cy.get('.pf-v5-c-button').contains('Cancel').click();
+    cy.get('.pf-v6-c-button').contains('Cancel').click();
 
     cy.get('[data-cy="DataForm-field-username"]').should(
       'not.contain',

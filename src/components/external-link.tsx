@@ -29,8 +29,8 @@ export const ExternalLink = ({
     download: { display: 'none' },
   }[variant];
   const className = {
-    nav: 'pf-v5-c-nav__link',
-    menu: 'pf-v5-c-dropdown__menu-item',
+    nav: 'pf-v6-c-nav__link',
+    menu: 'pf-v6-c-dropdown__menu-item',
   }[variant];
 
   return (

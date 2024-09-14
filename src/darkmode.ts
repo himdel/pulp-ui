@@ -2,9 +2,9 @@ export const reflectPreference = (value: 'dark' | 'light') => {
   const html = document.firstElementChild.classList;
 
   if (value === 'dark') {
-    html.add('pf-v5-theme-dark');
+    html.add('pf-v6-theme-dark');
   } else {
-    html.remove('pf-v5-theme-dark');
+    html.remove('pf-v6-theme-dark');
   }
 };
 

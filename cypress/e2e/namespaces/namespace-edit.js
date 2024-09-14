@@ -25,7 +25,7 @@ describe('Edit a namespace', () => {
   const getEditTab = () => {
     return cy
       .get(
-        'ul.pf-v5-c-tabs__list > li.pf-v5-c-tabs__item > a > span.pf-v5-c-tabs__item-text',
+        'ul.pf-v6-c-tabs__list > li.pf-v6-c-tabs__item > a > span.pf-v6-c-tabs__item-text',
       )
       .contains('Edit resources')
       .click();
@@ -33,15 +33,15 @@ describe('Edit a namespace', () => {
 
   const getTextField = () => {
     return cy.get(
-      'div.pf-v5-c-form__group-control .pf-v5-c-form-control textarea',
+      'div.pf-v6-c-form__group-control .pf-v6-c-form-control textarea',
     );
   };
 
   const helperText = (id) =>
     cy
       .get(`#${id}`)
-      .parents('.pf-v5-c-form__group')
-      .find('.pf-v5-c-helper-text__item-text');
+      .parents('.pf-v6-c-form__group')
+      .find('.pf-v6-c-helper-text__item-text');
 
   beforeEach(() => {
     cy.login();

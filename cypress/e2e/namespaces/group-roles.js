@@ -48,17 +48,17 @@ describe('Group Roles Tests', () => {
       `[data-cy="RoleListTable-CheckboxRow-row-${testRole.name}"] input`,
     ).click({ force: true });
 
-    cy.get('.pf-v5-c-wizard__footer > button').contains('Next').click();
+    cy.get('.pf-v6-c-wizard__footer > button').contains('Next').click();
 
     cy.contains(testRole.name);
 
-    cy.get('.pf-v5-c-wizard__footer > button').contains('Add').click();
+    cy.get('.pf-v6-c-wizard__footer > button').contains('Add').click();
 
     cy.menuGo('User Access > Groups');
     cy.get(`[data-cy="GroupList-row-${groupName}"] a`).click();
     cy.get('[data-cy="RoleListTable"]').contains(testRole.name);
     cy.get(
-      `[data-cy="RoleListTable-ExpandableRow-row-${testRole.name}"] .pf-v5-c-table__toggle`,
+      `[data-cy="RoleListTable-ExpandableRow-row-${testRole.name}"] .pf-v6-c-table__toggle`,
     ).click();
 
     cy.contains('1 more').click();
@@ -116,7 +116,7 @@ describe('Group Roles Tests', () => {
       .should('not.be.disabled')
       .click();
 
-    cy.get('.pf-v5-c-wizard').contains('Selected roles');
+    cy.get('.pf-v6-c-wizard').contains('Selected roles');
     cy.get(`[data-cy="PulpPermission-${testContainerRole.name}"]`);
 
     cy.contains('Next').click();
@@ -124,7 +124,7 @@ describe('Group Roles Tests', () => {
     cy.get('.pulp-custom-wizard-layout').contains(groupName);
     cy.get('.pulp-custom-wizard-layout').contains(testContainerRole.name);
 
-    cy.get('.pf-v5-c-wizard__footer > button')
+    cy.get('.pf-v6-c-wizard__footer > button')
       .contains('Add')
       .should('not.be.disabled');
   });
@@ -136,7 +136,7 @@ describe('Group Roles Tests', () => {
     cy.get(
       `[data-cy="RoleListTable-ExpandableRow-row-${testRole.name}"] [data-cy="kebab-toggle"]`,
     ).click();
-    cy.get('.pf-v5-c-dropdown__menu-item').contains('Remove role').click();
+    cy.get('.pf-v6-c-dropdown__menu-item').contains('Remove role').click();
 
     cy.get('[data-cy="delete-button"]').contains('Delete').click();
   });

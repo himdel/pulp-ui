@@ -40,7 +40,7 @@ describe('Container Signing', () => {
     cy.contains('Last updated from registry');
 
     cy.get('button[aria-label="Actions"]').click();
-    cy.contains('.pf-v5-c-dropdown ul li a', 'Sign').click();
+    cy.contains('.pf-v6-c-dropdown ul li a', 'Sign').click();
     cy.contains('Signing started for container "remote1');
     cy.contains('.pulp-header-bottom', 'Signed', {
       timeout: 30000,
@@ -56,7 +56,7 @@ describe('Container Signing', () => {
     });
 
     cy.get('button[aria-label="Actions"]').click();
-    cy.contains('.pf-v5-c-dropdown ul li a', 'Sign').click();
+    cy.contains('.pf-v6-c-dropdown ul li a', 'Sign').click();
     cy.contains('Container must be synchronized with remote repository first.');
   });
 
@@ -69,7 +69,7 @@ describe('Container Signing', () => {
     });
 
     cy.get('button[aria-label="Actions"]').click();
-    cy.contains('.pf-v5-c-dropdown ul li a', 'Sign').click();
+    cy.contains('.pf-v6-c-dropdown ul li a', 'Sign').click();
     cy.contains('Signing started for container "local1');
     cy.contains('.pulp-header-bottom', 'Signed', {
       timeout: 30000,

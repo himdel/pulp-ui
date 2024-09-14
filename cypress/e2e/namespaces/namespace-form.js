@@ -2,10 +2,10 @@ const uiPrefix = Cypress.env('uiPrefix');
 
 describe('A namespace form', () => {
   const getMessage = () => {
-    return cy.get('.pf-v5-c-form__helper-text');
+    return cy.get('.pf-v6-c-form__helper-text');
   };
   const getCreateButton = () => {
-    return cy.get('.pf-v5-c-modal-box__footer .pf-m-primary');
+    return cy.get('.pf-v6-c-modal-box__footer .pf-m-primary');
   };
   const getInputBox = () => {
     return cy.get('input[name="name"]');

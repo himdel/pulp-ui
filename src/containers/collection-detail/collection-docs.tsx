@@ -153,7 +153,7 @@ class CollectionDocs extends Component<RouteProps, IBaseCollectionState> {
             />
 
             <div
-              className='pulp-section pulp-docs-content pf-v5-c-content pulp-content-alert-fix'
+              className='pulp-section pulp-docs-content pf-v6-c-content pulp-content-alert-fix'
               ref={this.docsRef}
             >
               {displayHTML || pluginData ? (

@@ -15,13 +15,13 @@ export interface LinkTabsProps {
 const renderTab = ({ link, title, icon = null, active = false }) => (
   <li
     className={cx({
-      'pf-v5-c-tabs__item': true,
+      'pf-v6-c-tabs__item': true,
       'pf-m-current': active,
     })}
     key={title}
   >
-    <Link to={link} className='pf-v5-c-tabs__link'>
-      <span className='pf-v5-c-tabs__item-text'>
+    <Link to={link} className='pf-v6-c-tabs__link'>
+      <span className='pf-v6-c-tabs__item-text'>
         {icon ? <>{icon} </> : null}
         {title}
       </span>
@@ -31,8 +31,8 @@ const renderTab = ({ link, title, icon = null, active = false }) => (
 
 // We're not using the Tab react component because they don't support links.
 export const LinkTabs = ({ tabs }: LinkTabsProps) => (
-  <div className='pf-v5-c-tabs'>
-    <ul className='pf-v5-c-tabs__list'>
+  <div className='pf-v6-c-tabs'>
+    <ul className='pf-v6-c-tabs__list'>
       {tabs.filter(Boolean).map((tab) => renderTab(tab))}
     </ul>
   </div>

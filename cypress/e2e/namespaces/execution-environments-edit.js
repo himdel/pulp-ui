@@ -18,7 +18,7 @@ function deleteContainersManual() {
       cy.get('input[id=delete_confirm]').click();
       cy.contains('button', 'Delete').click();
       cy.wait('@listLoad', { timeout: 50000 });
-      cy.get('.pf-v5-c-alert__action').click();
+      cy.get('.pf-v6-c-alert__action').click();
     });
   });
 }
@@ -61,7 +61,7 @@ describe('containers', () => {
 
   it('edits a remote container', () => {
     cy.contains('a', `remotepine${num}`).click();
-    cy.get('.pf-v5-c-button.pf-m-secondary').contains('Edit').click();
+    cy.get('.pf-v6-c-button.pf-m-secondary').contains('Edit').click();
     cy.get('#description').type('This is the description.');
     cy.contains('button', 'Save').click();
     cy.wait(10000);
@@ -73,7 +73,7 @@ describe('containers', () => {
 
   it('edits a local container', () => {
     cy.contains('a', `localpine${num}`).click();
-    cy.get('.pf-v5-c-button.pf-m-secondary').contains('Edit').click();
+    cy.get('.pf-v6-c-button.pf-m-secondary').contains('Edit').click();
     cy.get('#description').type('This is the description.');
     cy.contains('button', 'Save').click();
     cy.wait(10000);

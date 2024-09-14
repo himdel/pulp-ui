@@ -5,7 +5,7 @@ import { LoadingSpinner, Main } from 'src/components';
 export const LoadingPage = (_props) => (
   <>
     <section
-      className={'pf-v5-c-page-header pf-v5-c-page__main-section pf-m-light'}
+      className={'pf-v6-c-page-header pf-v6-c-page__main-section pf-m-light'}
     >
       <Title headingLevel='h1'>
         <Skeleton />

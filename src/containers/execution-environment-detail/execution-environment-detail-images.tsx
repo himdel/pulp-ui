@@ -145,7 +145,7 @@ class ExecutionEnvironmentDetailImages extends Component<
           title: '',
           type: 'none',
           id: 'expand',
-          className: 'pf-v5-c-table__toggle',
+          className: 'pf-v6-c-table__toggle',
         },
         {
           title: t`Tag`,
@@ -392,7 +392,7 @@ class ExecutionEnvironmentDetailImages extends Component<
     return (
       <Fragment key={index}>
         <Tr>
-          <Td className='pf-v5-c-table__toggle'>
+          <Td className='pf-v6-c-table__toggle'>
             {isManifestList ? (
               <Button
                 variant='plain'

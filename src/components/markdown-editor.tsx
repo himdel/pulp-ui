@@ -40,7 +40,7 @@ export const MarkdownEditor = ({
       <div className='column preview-container'>
         {editing && t`Preview`}
         <div
-          className={editing ? 'pf-v5-c-content preview' : 'pf-v5-c-content'}
+          className={editing ? 'pf-v6-c-content preview' : 'pf-v6-c-content'}
         >
           <ReactMarkdown>{text || placeholder}</ReactMarkdown>
         </div>

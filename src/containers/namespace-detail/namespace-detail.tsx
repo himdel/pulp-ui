@@ -422,7 +422,7 @@ export class NamespaceDetail extends Component<RouteProps, IState> {
             title={t`Delete namespace?`}
             isDisabled={!confirmDelete || isNamespacePending}
           >
-            <Text style={{ paddingBottom: 'var(--pf-v5-global--spacer--md)' }}>
+            <Text style={{ paddingBottom: 'var(--pf-v6-global--spacer--md)' }}>
               <Trans>
                 Deleting <b>{namespace.name}</b> and its data will be lost.
               </Trans>
@@ -709,7 +709,7 @@ export class NamespaceDetail extends Component<RouteProps, IState> {
 
   private renderResources(namespace: NamespaceType) {
     return (
-      <div className='pf-v5-c-content preview'>
+      <div className='pf-v6-c-content preview'>
         <ReactMarkdown>{namespace.resources}</ReactMarkdown>
       </div>
     );

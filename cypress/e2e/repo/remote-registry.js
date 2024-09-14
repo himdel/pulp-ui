@@ -15,9 +15,9 @@ describe('Remote Registry Tests', () => {
   it('checks for empty state', () => {
     cy.menuGo('Containers > Remote Registries');
     cy.get(
-      '.pf-v5-c-empty-state__content .pf-v5-c-empty-state__title-text',
+      '.pf-v6-c-empty-state__content .pf-v6-c-empty-state__title-text',
     ).should('have.text', 'No remote registries yet');
-    cy.get('.pf-v5-c-empty-state__content > .pf-v5-c-empty-state__body').should(
+    cy.get('.pf-v6-c-empty-state__content > .pf-v6-c-empty-state__body').should(
       'have.text',
       'You currently have no remote registries.',
     );

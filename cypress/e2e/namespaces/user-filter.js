@@ -20,17 +20,17 @@ describe('Search for users', () => {
   const search = () =>
     cy
       .get(
-        '.pf-v5-c-toolbar__item > .pf-v5-c-input-group .pf-v5-c-button.pf-m-control',
+        '.pf-v6-c-toolbar__item > .pf-v6-c-input-group .pf-v6-c-button.pf-m-control',
       )
       .click();
   const filterDropdown = () =>
     cy
-      .get('.pf-v5-c-toolbar__item > .pf-v5-c-input-group > .pf-v5-c-dropdown')
+      .get('.pf-v6-c-toolbar__item > .pf-v6-c-input-group > .pf-v6-c-dropdown')
       .click();
-  const chooseField = () => cy.get('.pf-v5-c-dropdown__menu > li > a');
+  const chooseField = () => cy.get('.pf-v6-c-dropdown__menu > li > a');
   const emptyState = () =>
     cy
-      .get('.pf-v5-c-empty-state__content .pf-v5-c-empty-state__title-text')
+      .get('.pf-v6-c-empty-state__content .pf-v6-c-empty-state__title-text')
       .should('have.text', 'No results found');
 
   it('filters users', () => {
@@ -56,7 +56,7 @@ describe('Search for users', () => {
     usernamefilterInput().clear().type('new_userrrrr');
     search();
     emptyState();
-    cy.contains('.pf-v5-c-chip-group.pf-m-category', 'Username')
+    cy.contains('.pf-v6-c-chip-group.pf-m-category', 'Username')
       .get('button[data-ouia-component-id=close]')
       .click();
 
@@ -72,7 +72,7 @@ describe('Search for users', () => {
     firstnamefilterInput().clear().type('first_nammmmm');
     search();
     emptyState();
-    cy.contains('.pf-v5-c-chip-group.pf-m-category', 'First name')
+    cy.contains('.pf-v6-c-chip-group.pf-m-category', 'First name')
       .get('button[data-ouia-component-id=close]')
       .click();
 
@@ -88,7 +88,7 @@ describe('Search for users', () => {
     lastnamefilterInput().clear().type('last_nammmmm');
     search();
     emptyState();
-    cy.contains('.pf-v5-c-chip-group.pf-m-category', 'Last name')
+    cy.contains('.pf-v6-c-chip-group.pf-m-category', 'Last name')
       .get('button[data-ouia-component-id=close]')
       .click();
 
@@ -104,7 +104,7 @@ describe('Search for users', () => {
     emailfilterInput().clear().type('new_user@example.commmm');
     search();
     emptyState();
-    cy.contains('.pf-v5-c-chip-group.pf-m-category', 'Email')
+    cy.contains('.pf-v6-c-chip-group.pf-m-category', 'Email')
       .get('button[data-ouia-component-id=close]')
       .click();
   });

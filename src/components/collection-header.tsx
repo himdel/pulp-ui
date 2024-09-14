@@ -242,7 +242,7 @@ export const CollectionHeader = ({
               display: 'flex',
               justifyContent: 'space-between',
               alignItems: 'center',
-              paddingBottom: 'var(--pf-v5-global--spacer--md)',
+              paddingBottom: 'var(--pf-v6-global--spacer--md)',
             }}
           >
             <Text>{t`${collectionName}'s versions.`}</Text>
@@ -833,7 +833,7 @@ export const CollectionHeader = ({
               <Trans>Dependent collections</Trans>
               <List
                 style={{
-                  marginTop: 'var(--pf-v5-global--spacer--sm)',
+                  marginTop: 'var(--pf-v6-global--spacer--sm)',
                 }}
               >
                 {dependent_collection_versions.map((d) => (

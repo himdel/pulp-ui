@@ -37,7 +37,7 @@ export const BaseHeader = ({
     <div
       className={className}
       style={{
-        backgroundColor: 'var(--pf-v5-global--BackgroundColor--100)',
+        backgroundColor: 'var(--pf-v6-global--BackgroundColor--100)',
         padding: '0 24px',
       }}
     >

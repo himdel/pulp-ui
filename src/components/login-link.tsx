@@ -17,7 +17,7 @@ export const LoginLink = ({ button }: IProps) => {
 
   return (
     <Link
-      className={button ? 'pf-v5-c-button pf-m-primary' : ''}
+      className={button ? 'pf-v6-c-button pf-m-primary' : ''}
       to={formatPath(Paths.login, {}, { next: pathname })}
     >{t`Login`}</Link>
   );

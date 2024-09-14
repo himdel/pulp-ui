@@ -54,14 +54,14 @@ function PulpLoginPage(_props) {
   return (
     <LoginPage
       style={{
-        backgroundColor: 'var(--pf-v5-global--BackgroundColor--dark-100)',
+        backgroundColor: 'var(--pf-v6-global--BackgroundColor--dark-100)',
       }}
       loginTitle={t`Login`}
       brandImgSrc={PulpLogo}
     >
       <LoginForm
         helperText={
-          <span style={{ color: 'var(--pf-v5-global--danger-color--100)' }}>
+          <span style={{ color: 'var(--pf-v6-global--danger-color--100)' }}>
             <ExclamationCircleIcon /> {error}
           </span>
         }

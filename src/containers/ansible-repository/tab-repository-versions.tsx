@@ -272,7 +272,7 @@ export const RepositoryVersionsTab = ({
           ]}
         />
         <div
-          className='pf-v5-c-page__main-section'
+          className='pf-v6-c-page__main-section'
           style={{ padding: '8px 0', margin: '24px -16px 0' }}
         />
         <VersionContent

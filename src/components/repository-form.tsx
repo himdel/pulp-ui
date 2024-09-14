@@ -375,7 +375,7 @@ export class RepositoryForm extends Component<IProps, IState> {
                       variant='link'
                       style={{
                         padding: 0,
-                        fontSize: 'var(--pf-v5-c-helper-text--FontSize)',
+                        fontSize: 'var(--pf-v6-c-helper-text--FontSize)',
                       }}
                       onClick={() => this.setState({ includeTags: ['latest'] })}
                     >{t`Pull only latest?`}</Button>

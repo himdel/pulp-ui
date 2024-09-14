@@ -306,7 +306,7 @@ class GroupDetail extends Component<RouteProps, IState> {
         aria-label={t`add-user-modal`}
         title={''}
         header={
-          <span className='pf-v5-c-content'>
+          <span className='pf-v6-c-content'>
             <h2>{t`Add selected users to group`}</h2>{' '}
           </span>
         }

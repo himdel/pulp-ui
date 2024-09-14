@@ -1,8 +1,8 @@
 const helperText = (id) =>
   cy
     .get(`#${id}`)
-    .parents('.pf-v5-c-form__group')
-    .find('.pf-v5-c-helper-text__item-text');
+    .parents('.pf-v6-c-form__group')
+    .find('.pf-v6-c-helper-text__item-text');
 
 describe('add and delete roles', () => {
   const num = (~~(Math.random() * 1000000)).toString();
@@ -80,7 +80,7 @@ describe('add and delete roles', () => {
     cy.get('[aria-label="Actions"]:first').click();
     cy.contains('Delete').click();
     cy.get('button').contains('Delete').click();
-    cy.get('.pf-v5-c-alert__action').click();
+    cy.get('.pf-v6-c-alert__action').click();
     cy.contains(`galaxy.test${num}`).should('not.exist');
   });
 });

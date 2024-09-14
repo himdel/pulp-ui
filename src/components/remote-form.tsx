@@ -551,7 +551,7 @@ export class RemoteForm extends Component<IProps, IState> {
           toggleTextExpanded={t`Hide advanced options`}
           toggleTextCollapsed={t`Show advanced options`}
         >
-          <div className='pf-v5-c-form'>
+          <div className='pf-v6-c-form'>
             <FormGroup
               fieldId={'proxy_url'}
               label={t`Proxy URL`}
@@ -868,7 +868,7 @@ export class RemoteForm extends Component<IProps, IState> {
         {errorMessages['__nofield'] ? (
           <span
             style={{
-              color: 'var(--pf-v5-global--danger-color--200)',
+              color: 'var(--pf-v6-global--danger-color--200)',
             }}
           >
             {errorMessages['__nofield']}

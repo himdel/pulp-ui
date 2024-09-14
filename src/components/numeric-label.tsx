@@ -34,8 +34,8 @@ const NumericLabel = ({ number, newline, label }: IProps) => {
     <span
       key='label'
       style={{
-        fontSize: 'var(--pf-v5-global--FontSize--xs)',
-        color: 'var(--pf-v5-global--color--200)',
+        fontSize: 'var(--pf-v6-global--FontSize--xs)',
+        color: 'var(--pf-v6-global--color--200)',
       }}
     >
       {label}

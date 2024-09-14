@@ -77,7 +77,7 @@ class ExecutionEnvironmentDetail extends Component<IDetailSharedProps, IState> {
           </section>
         </FlexItem>
         <FlexItem>
-          <section className='pulp-section pf-v5-c-content'>
+          <section className='pulp-section pf-v6-c-content'>
             <Card>
               <CardBody>
                 <Title headingLevel='h2' size='lg'>

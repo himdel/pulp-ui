@@ -26,12 +26,12 @@ describe('Namespace detail screen', () => {
   });
 
   it('should show the correct URL when clicking on the CLI configuration tab', () => {
-    cy.get('.pf-v5-c-tabs__link').eq(1).click();
-    cy.get('.pf-v5-c-clipboard-copy__text').should('contain', apiPrefix);
+    cy.get('.pf-v6-c-tabs__link').eq(1).click();
+    cy.get('.pf-v6-c-clipboard-copy__text').should('contain', apiPrefix);
   });
 
   it('should show an error when tring to upload a new collecting wiht invalid name', () => {
-    cy.get('[data-cy="kebab-toggle"] > .pf-v5-c-button').click();
+    cy.get('[data-cy="kebab-toggle"] > .pf-v6-c-button').click();
     cy.fixture('collections/invalid-collection-name-1.0.0-bad.tar.gz', 'binary')
       .then(Cypress.Blob.binaryStringToBlob)
       .then((fileContent) => {

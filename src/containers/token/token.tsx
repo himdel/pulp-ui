@@ -56,7 +56,7 @@ class Token extends Component<RouteProps, IState> {
             <EmptyStateUnauthorized />
           ) : (
             <Card>
-              <section className='pulp-section pf-v5-c-content'>
+              <section className='pulp-section pf-v6-c-content'>
                 <CardTitle>
                   <h2>{t`API token`}</h2>
                 </CardTitle>
@@ -69,7 +69,7 @@ class Token extends Component<RouteProps, IState> {
                   </p>
                   {token ? (
                     <>
-                      <div className='pf-v5-c-content'>
+                      <div className='pf-v6-c-content'>
                         <Trans>
                           <b>WARNING</b> copy this token now. This is the only
                           time you will ever see it.
@@ -77,7 +77,7 @@ class Token extends Component<RouteProps, IState> {
                       </div>
                       <div
                         style={{
-                          paddingTop: 'var(--pf-v5-global--spacer--sm)',
+                          paddingTop: 'var(--pf-v6-global--spacer--sm)',
                         }}
                       >
                         <CopyURL url={token} />
@@ -85,7 +85,7 @@ class Token extends Component<RouteProps, IState> {
                     </>
                   ) : !token && !loadingToken ? (
                     <>
-                      <div className='pf-v5-c-content'>
+                      <div className='pf-v6-c-content'>
                         <Trans>
                           <b>WARNING</b> loading a new token will delete your
                           old token.
@@ -93,7 +93,7 @@ class Token extends Component<RouteProps, IState> {
                       </div>
                       <div
                         style={{
-                          paddingTop: 'var(--pf-v5-global--spacer--sm)',
+                          paddingTop: 'var(--pf-v6-global--spacer--sm)',
                         }}
                       >
                         <Button

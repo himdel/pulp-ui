@@ -34,7 +34,7 @@ Cypress.Commands.add('menuGo', {}, (name) => {
 });
 
 Cypress.Commands.add('assertTitle', {}, (title) => {
-  cy.contains('.pf-v5-c-title', title);
+  cy.contains('.pf-v6-c-title', title);
 });
 
 Cypress.Commands.add('openHeaderKebab', {}, () => {
@@ -103,7 +103,7 @@ Cypress.Commands.add('addRemoteRegistry', {}, (name, url, extra = null) => {
     cy.get('input[id="password"]').type(password);
 
     // advanced options
-    cy.get('.pf-v5-c-expandable-section__toggle-text').click();
+    cy.get('.pf-v6-c-expandable-section__toggle-text').click();
     cy.get('input[id="proxy_url"]').type(proxy_url);
     cy.get('input[id="proxy_username"]').type(proxy_username);
     cy.get('input[id="proxy_password"]').type(proxy_password);
@@ -142,7 +142,7 @@ Cypress.Commands.add(
     cy.get('input[id="upstreamName"]').type(upstream_name);
 
     cy.get(
-      '.pulp-formgroup-registry .pf-v5-c-form-control.pf-v5-c-select__toggle-typeahead input',
+      '.pulp-formgroup-registry .pf-v6-c-form-control.pf-v6-c-select__toggle-typeahead input',
     )
       .click()
       .type(registry);
@@ -151,7 +151,7 @@ Cypress.Commands.add(
     if (include_tags) {
       cy.get('input[id="addTagsInclude"]')
         .type(include_tags)
-        .parents('.pf-v5-c-input-group')
+        .parents('.pf-v6-c-input-group')
         .find('button', 'Add')
         .click();
     }
@@ -159,7 +159,7 @@ Cypress.Commands.add(
     if (exclude_tags) {
       cy.get('input[id="addTagsExclude"]')
         .type(exclude_tags)
-        .parents('.pf-v5-c-input-group')
+        .parents('.pf-v6-c-input-group')
         .find('button', 'Add')
         .click();
     }
@@ -225,9 +225,9 @@ Cypress.Commands.add('syncRemoteContainer', {}, (name) => {
     .find('button[aria-label="Actions"]')
     .click()
     .parents('tr')
-    .contains('.pf-v5-c-dropdown__menu-item', 'Sync from registry')
+    .contains('.pf-v6-c-dropdown__menu-item', 'Sync from registry')
     .click();
-  cy.contains('.pf-v5-c-alert__title', `Sync started for container "${name}".`);
+  cy.contains('.pf-v6-c-alert__title', `Sync started for container "${name}".`);
   // wait for finish
   cy.contains('a', 'detail page').click();
   cy.contains('[data-cy="title-box"] h1', 'Completed', { timeout: 30000 });
